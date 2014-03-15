@@ -331,6 +331,8 @@ body {
 .reveal table td {
 	text-align: left;
 	padding-right: .3em;
+    margin: .3em;
+    padding: .3em;
 }
 
 .reveal table th {
