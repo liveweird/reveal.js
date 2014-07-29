@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>TAP #2 - SPA</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -46,7 +46,7 @@
 					<h1>TAP #2</h1>
 					<h3>Single Page Applications</h3>
 					<p>
-						<small>Created by <a href="http://no-kill-switch.ghost.io">Sebastian Gebski</a> / <a href="http://twitter.com/liveweird">@liveweird</a></small>
+						<small>Sebastian Gebski / <a href="http://no-kill-switch.ghost.io">blog</a> / <a href="http://twitter.com/liveweird">@liveweird</a></small>
 					</p>
 				</section>
 
@@ -89,7 +89,7 @@
                             <span class="fragment semi-fade-out">Light-weight (computing power & network bandwidth)</span>
                         </p>
                         <p class="fragment roll-in">
-                            <span class="fragment semi-fade-out"><a href="http://caniuse.com/">HTML5 + CSS3</a></span>
+                            <a href="http://caniuse.com/"><img class="fragment semi-fade-out" width="25%" height="25%" src="img/006_htmlcss.png" alt="HTML + CSS ..."></img></a>
                         </p>
                         <p class="fragment roll-in">
                             <span class="fragment semi-fade-out">Transparently deployable</span>
@@ -149,6 +149,32 @@
                             <img class="fragment roll-in" width="640" height="383" src="img/001_javascript.jpg" alt="JavaScript ...">
                         </p>
                     </section>
+                    <section>
+                        <h3>Different ways of defining functions in JavaScript</h3>
+                        <pre><code data-trim class="fragment roll-in">
+                            function A(){};             // function declaration
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var B = function(){};       // function expression
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var C = (function(){});     // function expression with grouping operators
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var D = function foo(){};   // named function expression
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var E = (function(){        // function expression that returns a function
+            return function(){}
+        })();
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var F = new Function();     // Function constructor
+                        </code></pre>
+                        <pre><code data-trim class="fragment roll-in">
+                            var G = new function(){};   // special case: object constructor
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -164,10 +190,13 @@
                             <span class="fragment semi-fade-out">Chrome V8</span>
                         </p>
                         <p class="fragment roll-in">
-                            <span class="fragment semi-fade-out">Node.js</span>
+                            <img class="fragment semi-fade-out" width="25%" height="25%" src="img/016_nodejs.png" alt="Node.js ...">
                         </p>
                         <p class="fragment roll-in">
                             <span class="fragment semi-fade-out">ECMAScript 5, 6, ...</span>
+                        </p>
+                        <p class="fragment roll-in">
+                            <img class="fragment semi-fade-out" width="25%" height="25%" src="img/005_polymer.png" alt="Polymer ...">
                         </p>
                     </section>
                     <section>
@@ -175,18 +204,6 @@
                         <img class="fragment zoom-in" width="25%" height="25%" src="img/002_coffeescript.png" alt="CoffeeScript ...">
                         <img class="fragment zoom-in" width="25%" height="25%" src="img/003_dart.png" alt="Dart ...">
                         <img class="fragment zoom-in" width="25%" height="25%" src="img/004_typescript.png" alt="TypeScript ...">
-                    </section>
-                    <section>
-                        <h3>App frameworks / libraries</h3>
-                        <p>
-                            <img class="fragment roll-in" width="25%" height="25%" src="img/010_angularjs.png" alt="Angular.js ...">
-                            <img class="fragment roll-in" width="25%" height="25%" src="img/011_backbonejs.png" alt="Backbone.js ...">
-                            <img class="fragment roll-in" width="25%" height="25%" src="img/014_reactjs.png" alt="React.js ...">
-                        </p>
-                        <p>
-                            <img class="fragment roll-in" width="25%" height="25%" src="img/012_emberjs.png" alt="Ember.js ...">
-                            <img class="fragment roll-in" width="25%" height="25%" src="img/013_flight.png" alt="Flight ...">
-                        </p>
                     </section>
                 </section>
 
@@ -202,6 +219,10 @@
                             <li class="fragment zoom-in">Heavy session (state)</li>
                             <li class="fragment zoom-in">Thick client abstraction forced</li>
                         </ol>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/025_aspnet.png" alt="ASP.NET ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/023_jsf.png" alt="JSF ...">
+                        </p>
                     </section>
                     <section>
                         <h3>II. HTTP restoration</h3>
@@ -212,6 +233,11 @@
                             <li class="fragment zoom-in">Views composed directly of HTML elements, but ...</li>
                             <li class="fragment zoom-in">... in-view templating (server-side)</li>
                         </ol>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/024_spring.png" alt="Spring ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/009_nancy.png" alt="Nancy ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/008_play.png" alt="Play ...">
+                        </p>
                     </section>
                     <section>
                         <h3>III. SPA</h3>
@@ -222,6 +248,15 @@
                             <li class="fragment zoom-in">High complexity</li>
                             <li class="fragment zoom-in">Skill separation</li>
                         </ol>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/010_angularjs.png" alt="Angular.js ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/011_backbonejs.png" alt="Backbone.js ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/014_reactjs.png" alt="React.js ...">
+                        </p>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/012_emberjs.png" alt="Ember.js ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/013_flight.png" alt="Flight ...">
+                        </p>
                     </section>
                     <section>
                         <h3>Core SPA components</h3>
@@ -234,12 +269,27 @@
                             <li class="fragment zoom-in">SEO issues</li>
                         </ol>
                     </section>
+                    <section>
+                        <h3>Bunch of relevant tech</h3>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/007_json.png" alt="JSON ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/015_yeoman.png" alt="Yeoman ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/017_selenium.png" alt="Selenium ...">
+                        </p>
+                        <p>
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/018_karma.png" alt="Karma ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/019_protractor.png" alt="Protractor ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/020_jasmine.png" alt="Jasmine ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/021_phantomjs.jpg" alt="Phantom.js ...">
+                            <img class="fragment roll-in" width="25%" height="25%" src="img/022_npm.png" alt="npm ...">
+                        </p>
+                    </section>
                 </section>
 
                 <section>
 					<h1>THE END</h1>
                     <p>
-                        <small>Contact: <a href="http://no-kill-switch.ghost.io">Sebastian Gebski</a> / <a href="http://twitter.com/liveweird">@liveweird</a></small>
+                        <small>Sebastian Gebski / <a href="http://no-kill-switch.ghost.io">blog</a> / <a href="http://twitter.com/liveweird">@liveweird</a></small>
                     </p>
 				</section>
 
