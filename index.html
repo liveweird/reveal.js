@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>WG.NET #?? - Reactive Programming using Rx.NET</title>
+		<title>WG.NET #77 - Reactive Programming using Rx.NET</title>
 
-		<meta name="description" content="WG.NET #?? - Reactive Programming using Rx.NET">
+		<meta name="description" content="WG.NET #77 - Reactive Programming using Rx.NET">
 		<meta name="author" content="Sebastian Gebski">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -43,7 +43,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>WG.NET #??</h1>
+					<h1>WG.NET #77</h1>
 					<h3>Reactive Programming using Rx.NET</h3>
 					<p>
                         <small>Sebastian Gebski / <a href="http://no-kill-switch.ghost.io">blog</a> / <a href="http://twitter.com/liveweird">@liveweird</a></small>
@@ -52,54 +52,247 @@
 
                 <section>
                     <h1>The Plan</h1>
+                    <ol>
+                        <li class="fragment highlight-current-red">What's "Reactive"?</li>
+                        <li class="fragment highlight-current-red">Reactive Manifesto</li>
+                        <li class="fragment highlight-current-red">Rx - The Library</li>
+                        <li class="fragment highlight-current-red">Code, code, sh*tloads of code</li>
+                        <li class="fragment highlight-current-red">References</li>
+                    </ol>
                 </section>
 
                 <section>
-                    <h1>What's "Reactive"?</h1>
-
-                    http://www.reactivemanifesto.org/
-
-                    responsive
-                    scalable
-                    resilient
-                    event-driven
-
+                    <section>
+                        <h1>What's "Reactive"?</h1>
+                    </section>
+                    <section>
+                        <h2>Manifestos are trendy...</h2>
+                        <table>
+                            <tr>
+                                <td width="33%">
+                                    <img class="fragment zoom-in" src="img/manifesto_0.jpg"/>
+                                </td>
+                                <td width="33%">
+                                    <img class="fragment zoom-in" src="img/manifesto_2.jpg"/>
+                                </td>
+                                <td width="33%">
+                                    <img class="fragment zoom-in" src="img/manifesto_1.jpg"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Reactive Manifesto</h2>
+                        <h4><a href="http://www.reactivemanifesto.org/">http://www.reactivemanifesto.org</a></h4>
+                        <p>
+                            Reactive apps are ...
+                        </p>
+                        <ul>
+                            <li class="fragment zoom-in">responsive</li>
+                            <li class="fragment zoom-in">scalable</li>
+                            <li class="fragment zoom-in">resilient</li>
+                            <li class="fragment zoom-in">event-driven</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
-                    <h1>Welcome to the Rx</h1>
-
-
-                    The Reactive Extensions (Rx)...
-
-                    ...is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators.
-
-
-                    Which tech can utilize Rx
-                    Who uses Rx
+                    <section>
+                        <h1>Rx - The Library</h1>
+                        <img src="img/Rx_Logo_512.png"/>
+                    </section>
+                    <section>
+                        <h2>According to its creators ...</h2>
+                        <br/>
+                        <blockquote>
+                            The Reactive Extensions (Rx)...<br/>
+                            ...is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators.
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h2>Key building bloxx</h2>
+                        <ul>
+                            <li class="fragment roll-in">IObservable</li>
+                            <li class="fragment roll-in">IObserver</li>
+                            <li class="fragment roll-in">Subscripton ...<span class="fragment roll-in"><em>&nbsp;what</em> Subscription?! <strong>Disposable</strong></span></li>
+                            <li class="fragment roll-in">ISubject</li>
+                            <li class="fragment roll-in">IScheduler</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
-                    <h1>The Basics</h1>
-
-                    <img width="100%" src="img/marble.svg"/>
-
-                    Observable, Observer & ...
-                    Creating Observables (1-2)
-                    Both-way play (3-4)
-                    Subjects (5)
-                    Basic aggregation (6)
-                    Combining (7)
+                    <section>
+                        <h1>The Basics</h1>
+                        <h4>section #0</h4>
+                    </section>
+                    <section>
+                        <h3>Marble diagram</h3>
+                        <img width="100%" src="img/marble.svg"/>
+                    </section>
+                    <section>
+                        <h3>Key components in action</h3>
+                        <img width="100%" src="img/0_0_Observable.svg"/>
+                    </section>
                 </section>
 
                 <section>
-                    <h1>The Summary</h1>
-
-                    Resources
-                    http://www.introtorx.com/
-                    http://rxwiki.wikidot.com/
-
+                    <section>
+                        <h1>Creating Observables</h1>
+                        <h4>sections: #1 & #2</h4>
+                    </section>
+                    <section>
+                        <h3>Never</h3>
+                        <img width="100%" src="img/1_0_Never.svg"/>
+                    </section>
+                    <section>
+                        <h3>Empty</h3>
+                        <img width="100%" src="img/1_1_Empty.svg"/>
+                    </section>
+                    <section>
+                        <h3>Return</h3>
+                        <img width="100%" src="img/1_2_Return.svg"/>
+                    </section>
+                    <section>
+                        <h3>Throw</h3>
+                        <img width="100%" src="img/1_3_Throw.svg"/>
+                    </section>
+                    <section>
+                        <h3>Create</h3>
+                        <img width="100%" src="img/1_4_Create.svg"/>
+                    </section>
+                    <section>
+                        <h3>Effects of error</h3>
+                        <img width="100%" src="img/1_5_ErrorEnds.svg"/>
+                    </section>
+                    <section>
+                        <h3>Interval</h3>
+                        <img width="100%" src="img/2_0_Interval.svg"/>
+                    </section>
+                    <section>
+                        <h3>Timer</h3>
+                        <img width="100%" src="img/2_1_Timer.svg"/>
+                    </section>
                 </section>
+
+                <section>
+                    <section>
+                        <h1>Both-way play</h1>
+                        <h4>sections: #3 & #4</h4>
+                    </section>
+                    <section>
+                        <h3>Catch</h3>
+                        <img width="100%" src="img/3_0_Catch.svg"/>
+                    </section>
+                    <section>
+                        <h3>Retry</h3>
+                        <img width="100%" src="img/3_1_Retry.svg"/>
+                    </section>
+                    <section>
+                        <h3>Cancel</h3>
+                        <img width="100%" src="img/4_0_Cancel.svg"/>
+                    </section>
+                    <section>
+                        <h3>Distinct</h3>
+                        <img width="100%" src="img/4_1_Distinct.svg"/>
+                    </section>
+                    <section>
+                        <h3>Distinct until changed</h3>
+                        <img width="100%" src="img/4_2_UntilChanged.svg"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Subjects</h1>
+                        <h4>section #5</h4>
+                    </section>
+                    <section>
+                        <h3>Replay Subject</h3>
+                        <img width="100%" src="img/5_0_Replay.svg"/>
+                    </section>
+                    <section>
+                        <h3>Behavior Subject</h3>
+                        <img width="100%" src="img/5_1_Behavior.svg"/>
+                    </section>
+                    <section>
+                        <h3>Async Subject</h3>
+                        <img width="100%" src="img/5_2_Async.svg"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Basic aggregation</h1>
+                        <h4>section #6</h4>
+                    </section>
+                    <section>
+                        <h3>Buffer</h3>
+                        <img width="100%" src="img/6_0_Buffer.svg"/>
+                    </section>
+                    <section>
+                        <h3>Average</h3>
+                        <img width="100%" src="img/6_1_Average.svg"/>
+                    </section>
+                    <section>
+                        <h3>Sample</h3>
+                        <img width="100%" src="img/6_2_Sample.svg"/>
+                    </section>
+                    <section>
+                        <h3>Throttle</h3>
+                        <img width="100%" src="img/6_3_Throttle.svg"/>
+                    </section>
+                    <section>
+                        <h3>Aggregate</h3>
+                        <img width="100%" src="img/6_4_Aggregate.svg"/>
+                    </section>
+                    <section>
+                        <h3>Scan</h3>
+                        <img width="100%" src="img/6_5_Scan.svg"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Combining</h1>
+                        <h4>section #7</h4>
+                    </section>
+                    <section>
+                        <h3>Concat</h3>
+                        <img width="100%" src="img/7_0_Concat.svg"/>
+                    </section>
+                    <section>
+                        <h3>Amb</h3>
+                        <img width="100%" src="img/7_1_Amb.svg"/>
+                    </section>
+                    <section>
+                        <h3>Merge</h3>
+                        <img width="100%" src="img/7_2_Merge.svg"/>
+                    </section>
+                    <section>
+                        <h3>Switch</h3>
+                        <img width="100%" src="img/7_3_Switch.svg"/>
+                    </section>
+                    <section>
+                        <h3>Combine</h3>
+                        <img width="100%" src="img/7_4_Combine.svg"/>
+                    </section>
+                    <section>
+                        <h3>Zip</h3>
+                        <img width="100%" src="img/7_5_Zip.svg"/>
+                    </section>
+                    <section>
+                        <h3>Join</h3>
+                        <img width="100%" src="img/7_6_Join.svg"/>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Resources</h1>
+
+                    <h4><a href="http://www.introtorx.com/">http://www.introtorx.com</a></h4>
+                    <h4><a href="http://rxwiki.wikidot.com/">http://rxwiki.wikidot.com</a></h4>
+               </section>
 
                 <section>
 					<h1>THE END</h1>
