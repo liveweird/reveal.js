@@ -114,10 +114,14 @@
                         <ul>
                             <li class="fragment roll-in">IObservable</li>
                             <li class="fragment roll-in">IObserver</li>
-                            <li class="fragment roll-in">Subscripton ...<span class="fragment roll-in"><em>&nbsp;what</em> Subscription?! <strong>Disposable</strong></span></li>
+                            <li class="fragment roll-in">Subscripton ...<span class="fragment roll-in"><em>&nbsp;What?!</em> Subscription?! <strong>Disposable</strong></span></li>
                             <li class="fragment roll-in">ISubject</li>
                             <li class="fragment roll-in">IScheduler</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>Observable / observer pattern</h2>
+                        <img width="100%" src="img/concept.svg"/>
                     </section>
                 </section>
 
@@ -288,11 +292,65 @@
                 </section>
 
                 <section>
-                    <h1>Resources</h1>
+                    <section>
+                        <h1>Extras</h1>
+                    </section>
+                    <section>
+                        <h2>Rx ... not in .NET</h2>
+                        <pre>
+                            <code data-trim>
+'use strict';
 
-                    <h4><a href="http://www.introtorx.com/">http://www.introtorx.com</a></h4>
-                    <h4><a href="http://rxwiki.wikidot.com/">http://rxwiki.wikidot.com</a></h4>
-               </section>
+nebulaApp.service('nebulaLogSvc',
+                  ['$http','NEBULA_URL', function($http, nebulaUrl) {
+
+    var logBufferLength = 60;
+    var logBufferCpty = 10;
+
+    var idx = 1;
+    var apiLogger = Rx.Observer.create(function(entries) {
+        idx = idx + 1;
+
+        $http.post('' + nebulaUrl + 'api/Nebula/Log',
+                   {
+                       id: idx,
+                       entries: entries
+                   }
+        );
+    });
+
+    var loggedEvents = new Rx.Subject();
+    loggedEvents.bufferWithTimeOrCount(logBufferLength * 1000,
+                                       logBufferCpty)
+                .filter(function (array) {
+                    return (array.length > 0);
+                })
+                .subscribe(apiLogger);
+
+    function LogEntry(message, loginName) {
+        idx = idx + 1;
+        this.id = idx;
+        this.timeStamp = moment().toJSON();
+        this.message = message;
+        this.loginName = loginName;
+    };
+
+    this.log = function(message, loginName) {
+        loggedEvents.onNext(new LogEntry(message, loginName));
+    };
+}]);
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>Resources</h2>
+
+                        <h4><a href="http://www.introtorx.com/">http://www.introtorx.com</a></h4>
+                        <h4><a href="http://rxwiki.wikidot.com/">http://rxwiki.wikidot.com</a></h4>
+                        <h4><a href="http://rxmarbles.com/">http://rxmarbles.com</a></h4>
+                        <h4><a href="https://github.com/Reactive-Extensions/">https://github.com/Reactive-Extensions</a></h4>
+                    </section>
+                </section>
 
                 <section>
 					<h1>THE END</h1>
